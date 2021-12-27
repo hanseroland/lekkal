@@ -54,10 +54,10 @@ export const MainContainer = styled.div`
     
     
     useEffect(() => {
-        if(userSignin.userInfo == null){
-          navigate('/connexion')
-        }
-      }, [])
+      if(userSignin === ""){
+        navigate('/connexion')
+      }
+    }, [])
 
 
     const getRestau = async () => {

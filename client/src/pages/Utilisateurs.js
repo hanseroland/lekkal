@@ -54,7 +54,7 @@ export const MainContainer = styled.div`
     
     
     useEffect(() => {
-        if(userSignin.userInfo == null){
+        if(userSignin === ""){
           navigate('/connexion')
         }
       }, [])

@@ -76,8 +76,8 @@ function Dashboard() {
       []
     );
 
-    useEffect(() => {
-      if(userSignin.userInfo == null){
+    useEffect(() => { 
+      if(userSignin === ""){
         navigate('/connexion')
       }
     }, [])
