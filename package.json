@@ -6,9 +6,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon index.js",
-        "build": "cd client && npm run buid",
+        "build": "cd client && npm run build",
         "install-client": "cd client && npm install",
-        "heroku-postbuild": "npm run install-client && npm run buid",
+        "heroku-postbuild": "npm run install-client && npm run build",
         "server": "nodemon index.js",
         "client": "npm run start --prefix client",
         "dev": "concurrently -n 'index,client' -c 'red,green' \" nodemon index.js \"  \" npm run client \""
