@@ -41,12 +41,7 @@ export const MainContainer = styled.div`
     const navigate = useNavigate();
     const userSignin = useSelector((state) => state.userSignin);
     
-    
-    useEffect(() => {
-        if(userSignin === ""){
-          navigate('/connexion')
-        }
-      }, [])
+   
 
     useEffect(() => {
         let isAmounted = true;
