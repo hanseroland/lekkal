@@ -10,7 +10,7 @@ const { verifyToken } = require('./verifyToken');
 //auth
 router.post("/register",authController.signUp);
 router.post("/login",authController.signIn);
-router.get("/logout",verifyToken,authController.logout);
+router.get("/logout",authController.logout);
 
 //crud
 router.get("/", userContoller.getAllUsers);
