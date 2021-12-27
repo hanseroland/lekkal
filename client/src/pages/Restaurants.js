@@ -53,7 +53,11 @@ export const MainContainer = styled.div`
     const userSignin = useSelector((state) => state.userSignin);
     
     
-  
+    useEffect(() => {
+        if(userSignin.userInfo == null){
+          navigate('/connexion')
+        }
+      }, [])
 
 
     const getRestau = async () => {

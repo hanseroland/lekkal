@@ -76,7 +76,11 @@ function Dashboard() {
       []
     );
 
-  
+    useEffect(() => {
+      if(userSignin.userInfo == null){
+        navigate('/connexion')
+      }
+    }, [])
   
     useEffect(() => {
         const getRestau = async () => {
