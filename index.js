@@ -10,9 +10,10 @@ const userRoutes = require('./routes/users')
 
 dotenv.config();
 
-mongoose.connect("mongodb+srv://parfaitcarree:"+process.env.DB_USER_PASS+"@clusterlekkal.ce8cl.mongodb.net/test").then(()=>console.log('MongoDB connection succes'))
+mongoose.connect("mongodb+srv://parfaitcarree:"+process.env.DB_USER_PASS+"@clusterlekkal.ce8cl.mongodb.net/test")
+        .then(()=>console.log('MongoDB connection succes'))
         .catch((err)=>{
-            console.log(err);
+          console.log(err);
 });
 
 app.use(cors({origin: true, credentials: true}));
